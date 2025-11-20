@@ -1,0 +1,82 @@
+
+# =========== ALIASES =================
+alias vz='vim ~/.zshrc'
+alias sz='source ~/.zshrc'
+
+alias cd..='cd ..'
+alias cd.='cd ..'
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+alias cd-='cd -'
+alias c-='cd -'
+
+
+alias l='eza -lo --group-directories-first --no-permissions  --no-user --no-time --header'
+alias ll='eza  -loa --header'
+alias lll='eza  -laoF --header'
+alias ls=eza
+alias lz='eza -lZ --header --no-filesize --no-user --no-time'
+alias l3='eza -lT --level=3 --no-permissions  --no-user --no-time --no-filesize'
+alias lt='eza -lT --no-permissions  --no-user --no-time'
+alias lf='eza -lf --no-filesize --no-user --no-time'
+alias lk='eza -lD --no-user --no-time'
+
+alias rm='rm -i'
+alias o='dolphin . &'
+alias mkdir='mkdir -pv'
+#alias ccat='/bin/cat'
+alias ccat='command cat'
+alias cat=bat
+
+alias ipc="ipcalc"
+alias mn=tldr
+alias mydiff='delta --line-numbers'
+
+alias dig='dig ANY  +noall +answer'
+alias nano=vim
+alias v=vim
+alias sv='sudo vim'
+alias c=clear
+
+alias cisco_console='sudo picocom -b 9600 /dev/ttyUSB0'
+alias cisco_usb='sudo picocom -b 9600 /dev/serial/by-id/usb-Cisco_Cisco_USB_Console-if00'
+
+alias copy='tee >(xclip -i -selection clipboard) > >(bat --paging=never) && echo -e "\n\033[1;32m✓ Скопировано в буфер!\033[0m\n"'
+alias ccopy='tee >(xclip -i -selection clipboard) > >(cat) && echo -e "\n\033[1;32m✓ Скопировано в буфер!\033[0m\n"'
+
+alias snap-root='sudo btrfs subvolume snapshot / /.snapshots/root_$(date +%Y%m%d_%H%M)'
+alias snap-home='sudo btrfs subvolume snapshot /home /home/.snapshots/home_$(date +%Y%m%d_%H%M)'
+alias list-snaps='sudo btrfs subvolume list /'
+
+
+
+alias vz='vim ~/.zshrc'
+alias sz='source ~/.zshrc'
+
+alias cd..='cd ..'
+alias cd.='cd ..'
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+alias cd-='cd -'
+
+alias ipin="ip a | grep mtu | awk -F': ' '{ print \$2}'"
+alias ipip="ip a | grep 'inet ' | awk '{ print \$2 }' | grep -v '127.0.0.1'"
+
+alias l='eza -lo --group-directories-first --no-permissions  --no-user --no-time --header'
+alias ll='eza  -loa --header'
+alias lll='eza  -laoF --header'
+alias ls=eza
+alias lz='eza -lZ --header --no-filesize --no-user --no-time'
+alias l3='eza -lT --level=3 --no-permissions  --no-user --no-time --no-filesize'
+alias lt='eza -lT --no-permissions  --no-user --no-time'
+alias lf='eza -lf --no-filesize --no-user --no-time'
+alias lk='eza -lD --no-user --no-time'
+
