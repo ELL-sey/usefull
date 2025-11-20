@@ -1,0 +1,15 @@
+#!/bin/bash
+
+MYDATE=$(/bin/date +'%Y/%m/%d %H:%M:%S')
+myVar=$( < /dev/stdin)
+
+TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxx
+CHID=yyyyyyyyyyyyyyyyyyyyy
+URL="https://api.telegram.org/bot$TOKEN/sendMessage"
+
+echo "$myVar" 
+
+/usr/bin/curl -s -X POST $URL -d chat_id=$CHID -d parse_mod=markdown  -d text="$MYDATE %0AMessage from $HOSTNAME %0A__________________ %0A$myVar" > /dev/null  
+exit 0
+
+# add alias tg=/home/el/scripts/tg.sh
