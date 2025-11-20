@@ -1,0 +1,9 @@
+#   fastfetch
+if command -v fastfetch &> /dev/null; then
+    fastfetch --logo kali --structure Title:Separator:OS:Host:Kernel:Uptime:Packages:Shell:Display:DE:WM:Terminal:CPU:GPU:Memory:Disk:LocalIP
+fi
+
+mkcd ()
+{
+  mkdir -p -- "$1" && cd -P -- "$1"
+}
